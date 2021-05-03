@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'oasis-site',
+    title: 'Oasis - community powered crypto-currency',
     htmlAttrs: {
       lang: 'en'
     },
@@ -20,12 +20,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/sass/main.scss',
     'element-ui/lib/theme-chalk/index.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/vue-typed'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +42,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-fullpage.js',
+    '~/modules/svgLoader.ts'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -48,6 +52,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/]
+    transpile: [
+      'lodash-es',
+      /^element-ui/
+    ]
+  },
+  env: {
+    FULLPAGE_LICENSE_KEY: '4371956D-A1E94E28-95547766-F05E0915'
+  },
+  generate: {
+    exclude: [
+      '/index1',
+      /^\/src/
+    ]
   }
 }
