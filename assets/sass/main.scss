@@ -5,7 +5,7 @@ $red-light: #E6332A;
 $yellow: #f9b234;
 $blue: #39CAD2;
 $orange: #F25B21;
-@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Saira:wght@400;700;800&display=swap);
 
 html, body {
@@ -72,6 +72,10 @@ p {
   position: relative;
 }
 
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
 #tokenomics-header {
   margin-bottom: 125px;
 }
@@ -106,7 +110,7 @@ p {
     button {
       border: none;
       background: none;
-
+      outline: none;
     }
   }
   &__icon {
@@ -144,6 +148,7 @@ p {
   color: #fff;
   margin-bottom: 36px;
   font-family: "Saira";
+  letter-spacing: 0.015em;
 
   a {
     color: $red-light;
@@ -171,6 +176,7 @@ p {
 
 .hero__paragraph {
   margin-bottom: 54px;
+  letter-spacing: 0.04em;
 }
 
 .btn {
@@ -182,14 +188,14 @@ p {
   font-weight: bold;
   line-height: 1.47;
   outline: none;
-  transition: opacity .4s;
+  transition: background-color .5s;
   text-decoration: none;
   &--primary {
     background-color: $blue;
-  }
 
-  &:focus, &:active, &:hover {
-    opacity: 0.8;
+    &:focus, &:active, &:hover {
+      background-color: $orange;
+    }
   }
 }
 
@@ -403,6 +409,38 @@ footer {
   background-color: $grey;
 }
 
+#mobile-menu {
+  background: linear-gradient(34.75deg, #E6332A 26.98%, #F9B233 108.86%);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 74px 0 50px;
+}
+
+.mobile-menu__element {
+  text-align: center;
+  a {
+    font-size: 1.75rem;
+    line-height: 1.47;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+  &:not(:last-child) {
+    margin-bottom: 92px;
+  }
+  &__socials {
+    a:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
 #harry {
   cursor: pointer;
   user-select: none;
@@ -420,6 +458,7 @@ footer {
   margin: auto auto 38px;
 }
 #particle-1 {
+  z-index: 22;
   position: absolute;
   top: 34px;
   left: 30%;
@@ -433,18 +472,38 @@ footer {
     transform: translatey(-10px);
   }
 }
-#particle-2 {
-  position: absolute;
-  top: 130px;
-  right: 20%;
-  animation: FloatFirstParticle 4s ease-in-out infinite;
-}
-#particle-3 {
-  position: absolute;
-  left: 33px;
-  animation: FloatFirstParticle 4s ease-in-out infinite;
-}
 #particle-4 {
+  animation: FloatFirstParticle 4s ease-in-out infinite;
+}
+
+#particle-5 {
+  display: block;
+  margin-top: 40px;
+}
+
+#particle-6 {
+  position: absolute;
+  top: 295px;
+}
+
+#particle-7 {
+  position: absolute;
+  top: 217px;
+  right: 0;
+}
+
+#particle-8 {
+  position: absolute;
+  top: 568px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#particle-9 {
+  position: absolute;
+  top: 145px;
+  left: 0;
   animation: FloatFirstParticle 4s ease-in-out infinite;
 }
 
@@ -464,12 +523,10 @@ footer {
 @media (max-width: 1750px) {
   #big {
     width: 600px;
+    top:231px;
   }
   #particle-1 {
     left: 20%;
-  }
-  #particle-2 {
-    right: 10%;
   }
 }
 
@@ -480,9 +537,6 @@ footer {
   }
   #particle-1 {
     left: 20px;
-  }
-  #particle-2 {
-    right: 20px;
   }
   .navbar__right {
     margin-right: 0;
@@ -542,6 +596,31 @@ footer {
       margin-bottom: 0;
     }
   }
+
+  .navbar {
+    margin-top: 56px;
+
+    &__inline {
+      display: none;
+    }
+    &__socials {
+      display: none;
+    }
+    &__mobile {
+      display: block;
+
+      &--active {
+        svg {
+          rect {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  #particle-1 {
+     display: none;
+   }
 
   .htb-step {
     margin-bottom: 60px;
@@ -603,25 +682,12 @@ footer {
   height: 487px;
 }
 @media (max-width: 768px) {
-  #particle-1 {
-    display: none;
-  }
-  #particle-2 {
-    display: none;
-  }
   #schema-animation {
     width: 310px;
     height: 310px;
   }
-  .navbar {
-    margin-top: 56px;
-
-    &__inline {
-      display: none;
-    }
-    &__mobile {
-      display: block;
-    }
+  #particle-6, #particle-7, #particle-8, #particle-9 {
+    display: none;
   }
   .hero__header, .hero__description__big {
     word-break: break-word;
@@ -645,7 +711,26 @@ footer {
   }
 }
 
+@media (max-height: 700px) {
+  .navbar {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-height: 620px) {
+  .mobile-menu__element:not(:last-child) {
+    margin-bottom: 62px;
+  }
+}
+
 @media (max-width: 415px) {
+  .navbar__left {
+    svg {
+      height: 65px;
+      width: 159px;
+    }
+  }
   .hero__header {
     text-align: left;
   }

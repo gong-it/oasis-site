@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container style="position: static">
     <el-main>
       <el-header id="menu">
         <nav class="navbar">
@@ -10,7 +10,7 @@
           </div>
           <div class="navbar__right">
             <div class="navbar__mobile">
-              <button>
+              <button :class="{ 'navbar__mobile--active': menu }" @click="toggleMobileMenu()">
                 <burger-icon></burger-icon>
               </button>
             </div>
@@ -43,8 +43,20 @@
         </nav>
       </el-header>
     </el-main>
+    <transition
+      @enter="enterAnimation"
+      @leave="leaveAnimation"
+    >
+      <mobile-menu v-if="menu" @close="toggleMobileMenu"></mobile-menu>
+    </transition>
   </el-container>
 </template>
 
 <script lang="ts" src="./src/NavBar.ts">
 </script>
+<style scoped>
+  .el-main {
+    z-index: 21;
+    background: #18181C;
+  }
+</style>

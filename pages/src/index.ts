@@ -9,6 +9,11 @@ import Particle1 from '~/assets/first-screen/particle-1.svg'
 import Particle2 from '~/assets/first-screen/particle-2.svg'
 import Particle3 from '~/assets/first-screen/particle-3.svg'
 import Particle4 from '~/assets/first-screen/particle-4.svg'
+import Particle5 from '~/assets/second-screen/particle-5.svg'
+import Particle6 from '~/assets/third-screen/particle-6.svg'
+import Particle7 from '~/assets/third-screen/particle-7.svg'
+import Particle8 from '~/assets/third-screen/particle-8.svg'
+import Particle9 from '~/assets/fourth-screen/particle-9.svg'
 import BigLogo from '~/assets/first-screen/big-logo.svg'
 import BigLogoMobile from '~/assets/first-screen/big-logo-mobile.svg'
 import ProjectsSchema from '~/assets/second-screen/projects-schema.svg'
@@ -33,6 +38,11 @@ import FooterBg from '~/assets/footer-bg.svg'
     Particle2,
     Particle3,
     Particle4,
+    Particle5,
+    Particle6,
+    Particle7,
+    Particle8,
+    Particle9,
     BigLogo,
     BigLogoMobile,
     ProjectsSchema,

@@ -3,13 +3,12 @@
     <full-page id="fullpage" ref="fullpage" :options="options">
       <section class="section">
         <particle-1 id="particle-1" />
-        <particle-2 id="particle-2" />
         <big-logo id="big" />
         <nav-bar />
         <el-container>
           <el-main id="first-screen">
             <h1 id="header" class="hero__header text-uppercase">
-              There is <a href="https://www.youtube.com/watch?v=6hzrDeceEKc" target="_blank">wonderwall</a>
+              There is <a href="https://youtu.be/6hzrDeceEKc?t=16" target="_blank">wonderwall</a>
               <br>
               <b>
                 in the defi wild west.
@@ -37,7 +36,6 @@
             <particle-4 id="particle-4" />
           </el-main>
         </el-container>
-        <particle-3 id="particle-3" />
       </section>
       <section class="section">
         <el-container>
@@ -47,7 +45,7 @@
                 One token to rule them all
               </b>
             </h1>
-            <p class="hero__paragraph" style="margin-bottom: 80px">
+            <p class="hero__paragraph" style="margin-bottom: 80px; max-width: 900px">
               Oasis token will provide its holders with access to a wide range of the projects developed by the community.
               <br>
               <br>
@@ -56,17 +54,21 @@
             <div class="hero__description hero__description--second-screen align-items-center">
               <div id="schema-animation"></div>
               <div class="hero__description__big">
-                <span class="text-orange">Hold one token</span> - use
+                <span class="text-orange">Hold one token -</span> use
                 <br>
                 multiple projects,
                 <br>
                 simple as that.
+                <particle-5 id="particle-5"></particle-5>
               </div>
             </div>
           </el-main>
         </el-container>
       </section>
       <section class="section">
+        <particle-6 id="particle-6"></particle-6>
+        <particle-7 id="particle-7"></particle-7>
+        <particle-8 id="particle-8"></particle-8>
         <el-container>
           <el-main>
             <h1 class="hero__header text-center" style="margin-bottom: 125px">
@@ -206,6 +208,7 @@
         </el-container>
       </section>
       <section class="section">
+        <particle-9 id="particle-9"></particle-9>
         <el-container>
           <el-main>
             <h1 id="tokenomics-header" class="hero__header text-center">
