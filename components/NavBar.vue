@@ -26,6 +26,20 @@
               </a>
             </div>
           </div>
+          <div class="navbar__socials">
+            <a href="https://discord.gg/cryptoasisds" target="_blank">
+              <discord-icon></discord-icon>
+            </a>
+            <a href="https://twitter.com/CryptOasisDS" target="_blank">
+              <twitter-icon></twitter-icon>
+            </a>
+            <a href="https://t.me/CryptOasisChat" target="_blank">
+              <telegram-icon></telegram-icon>
+            </a>
+            <a href="https://bscscan.com/token/0xd9c99510a5e3145359d91fe9caf92dd5d68b603a" target="_blank">
+              <bsc-icon></bsc-icon>
+            </a>
+          </div>
         </nav>
       </el-header>
     </el-main>

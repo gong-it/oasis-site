@@ -9,7 +9,7 @@
         <el-container>
           <el-main id="first-screen">
             <h1 id="header" class="hero__header text-uppercase">
-              There is wonderwall
+              There is <a href="https://www.youtube.com/watch?v=6hzrDeceEKc" target="_blank">wonderwall</a>
               <br>
               <b>
                 in the defi wild west.
@@ -288,7 +288,7 @@
                   <h1 class="hero__header">
                     <b>Notable members</b>
                   </h1>
-                  <el-row v-for="(chunk, index) in notableMembersChunks" :key="`notable-members-chunk-${index}`" :gutter="70">
+                  <el-row v-for="(chunk, index) in notableMembersChunks" :key="`notable-members-chunk-${index}`" :gutter="140">
                     <el-col
                       v-for="member in chunk"
                       :key="`notable-member-${member.toLowerCase()}`"

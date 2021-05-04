@@ -85,7 +85,20 @@ p {
 
   &__right {
     text-align: right;
-    margin-right: 250px;
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(94.54deg, #E6332A -24.4%, #F69D31 119.39%);
+    border-radius: 78px;
+    padding: 8px 30px;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    a:not(:last-child) {
+      margin-right: 20px;
+    }
   }
   &__mobile {
     display: none;
@@ -131,6 +144,10 @@ p {
   color: #fff;
   margin-bottom: 36px;
   font-family: "Saira";
+
+  a {
+    color: $red-light;
+  }
 
   .typed-element {
     height: 2.5rem;
@@ -393,7 +410,7 @@ footer {
 
 #big {
   position: absolute;
-  top: 193px;
+  top: 313px;
   bottom: 0;
   right: 0;
 }
