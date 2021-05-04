@@ -2,6 +2,7 @@ import { Vue, Component } from 'nuxt-property-decorator'
 
 import { gsap } from 'gsap'
 import { chunk } from 'lodash-es'
+import lottie from 'lottie-web'
 import NavBar from '~/components/NavBar.vue'
 import HeroLogo from '~/assets/hero-logo.svg'
 import Particle1 from '~/assets/first-screen/particle-1.svg'
@@ -98,6 +99,14 @@ export default class IndexPage extends Vue {
 
   mounted () {
     this.startAnimation()
+
+    lottie.loadAnimation({
+      container: document.getElementById('schema-animation')!, // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'schema.json' // the path to the animation json
+    })
   }
 
   startAnimation () {
@@ -124,6 +133,25 @@ export default class IndexPage extends Vue {
       delay: 2,
       duration: 2,
       x: 0
+    })
+  }
+
+  harry (member) {
+    if (member !== 'savemeharry') {
+      return
+    }
+
+    gsap.fromTo('#harry', { opacity: 1 }, {
+      opacity: 0,
+      duration: 1.5,
+      onComplete () {
+        const harryEl = document.getElementById('harry')
+        const innerText = '404'
+
+        if (harryEl && harryEl.innerText !== innerText) {
+          harryEl.innerText = innerText
+        }
+      }
     })
   }
 }

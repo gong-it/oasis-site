@@ -5,14 +5,14 @@ $red-light: #E6332A;
 $yellow: #f9b234;
 $blue: #39CAD2;
 $orange: #F25B21;
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;700;800&display=swap');
 
 html, body {
   width: 100%;
   height: 100%;
   background: $dark;
-  font-family: "Manrope",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Red Hat Display",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: #fff;
 }
 
@@ -130,6 +130,7 @@ p {
   line-height: 1.42;
   color: #fff;
   margin-bottom: 36px;
+  font-family: "Saira";
 
   .typed-element {
     height: 2.5rem;
@@ -385,6 +386,11 @@ footer {
   background-color: $grey;
 }
 
+#harry {
+  cursor: pointer;
+  user-select: none;
+}
+
 #big {
   position: absolute;
   top: 193px;
@@ -575,7 +581,10 @@ footer {
     }
   }
 }
-
+#schema-animation {
+  width: 487px;
+  height: 487px;
+}
 @media (max-width: 768px) {
   #particle-1 {
     display: none;
@@ -583,7 +592,7 @@ footer {
   #particle-2 {
     display: none;
   }
-  #schema {
+  #schema-animation {
     width: 310px;
     height: 310px;
   }

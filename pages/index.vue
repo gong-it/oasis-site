@@ -54,7 +54,7 @@
               Pre-sale snipe bot, New listing auto-buy/sell bot, news and feeds for selected coins, discussion board, portfolio tracking, in depth research reports, and more!
             </p>
             <div class="hero__description hero__description--second-screen align-items-center">
-              <projects-schema id="schema" />
+              <div id="schema-animation"></div>
               <div class="hero__description__big">
                 <span class="text-orange">Hold one token</span> - use
                 <br>
@@ -298,7 +298,7 @@
                       :lg="6"
                       :xl="6"
                     >
-                      <div class="notable-members__member">
+                      <div :id="member.toLowerCase() === 'savemeharry' ? 'harry' : null" class="notable-members__member" @click="harry(member.toLowerCase())">
                         {{ member }}
                       </div>
                     </el-col>
@@ -310,7 +310,7 @@
         </el-container>
         <footer>
           <div class="content">
-            <a href="discord.gg/cryptoasisds" style="color: #fff" target="_blank">Oasis community (c) 2021</a>
+            <a href="https://discord.gg/cryptoasisds" style="color: #fff" target="_blank">Oasis community (c) 2021</a>
           </div>
         </footer>
       </section>
