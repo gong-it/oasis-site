@@ -3,7 +3,7 @@
     <full-page id="fullpage" ref="fullpage" :options="options">
       <section class="section">
         <particle-1 id="particle-1" />
-        <big-logo id="big" />
+        <div id="big"></div>
         <nav-bar />
         <el-container>
           <el-main id="first-screen">
@@ -14,7 +14,7 @@
                 in the defi wild west.
               </b>
             </h1>
-            <big-logo-mobile id="big-mobile" />
+            <div id="big-mobile"></div>
             <div id="description" class="hero__description">
               <a id="description-mobile-button" class="btn btn--primary d-inline-block" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd9c99510a5e3145359d91fe9caf92dd5d68b603a" target="_blank">
                 Buy token

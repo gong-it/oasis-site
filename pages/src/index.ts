@@ -117,6 +117,22 @@ export default class IndexPage extends Vue {
       autoplay: true,
       path: 'schema.json' // the path to the animation json
     })
+
+    lottie.loadAnimation({
+      container: document.getElementById('big')!, // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'oasis.json' // the path to the animation json
+    })
+
+    lottie.loadAnimation({
+      container: document.getElementById('big-mobile')!, // the dom element that will contain the animation
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'oasis.json' // the path to the animation json
+    })
   }
 
   startAnimation () {

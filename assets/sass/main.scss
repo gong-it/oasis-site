@@ -447,9 +447,11 @@ footer {
 
 #big {
   position: absolute;
-  top: 313px;
+  top: 213px;
   bottom: 0;
   right: 0;
+  width: 800px;
+  height: 953px;
 }
 #big-mobile {
   width: 325px;
@@ -522,7 +524,7 @@ footer {
 @media (max-width: 1750px) {
   #big {
     width: 600px;
-    top:231px;
+    top:131px;
   }
   #particle-1 {
     left: 20%;
