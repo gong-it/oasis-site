@@ -285,6 +285,9 @@
                   0xd9c99510a5e3145359d91fe9caf92dd5d68b603a
                 </a>
               </p>
+
+              <iframe width="100%" height="497" src="https://charts.bogged.finance/?token=0xd9c99510a5E3145359d91fE9CaF92dd5d68b603A" frameborder="0" style="margin-bottom: 60px"></iframe>
+
               <div class="notable-members">
                 <oasis />
                 <div class="notable-members__content">
