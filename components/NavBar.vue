@@ -1,5 +1,5 @@
 <template>
-  <el-container style="position: static">
+  <el-container style="z-index: 24">
     <el-main>
       <el-header id="menu">
         <nav class="navbar">
@@ -57,6 +57,5 @@
 <style scoped>
   .el-main {
     z-index: 21;
-    background: #18181C;
   }
 </style>
