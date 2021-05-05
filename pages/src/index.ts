@@ -120,6 +120,12 @@ export default class IndexPage extends Vue {
   }
 
   startAnimation () {
+    gsap.fromTo('#particle-1', { y: -20, opacity: 0 }, {
+      opacity: 1,
+      delay: 2,
+      duration: 1.2,
+      y: 0
+    })
     gsap.fromTo('#menu', { y: -20, opacity: 0 }, {
       opacity: 1,
       delay: 2,
@@ -133,6 +139,12 @@ export default class IndexPage extends Vue {
       y: 0
     })
     gsap.fromTo('#description', { y: -20, opacity: 0 }, {
+      opacity: 1,
+      delay: 1,
+      duration: 1.2,
+      y: 0
+    })
+    gsap.fromTo('#particle-4', { y: -20, opacity: 0 }, {
       opacity: 1,
       delay: 1,
       duration: 1.2,

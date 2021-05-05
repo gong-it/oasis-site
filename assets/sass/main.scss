@@ -5,8 +5,6 @@ $red-light: #E6332A;
 $yellow: #f9b234;
 $blue: #39CAD2;
 $orange: #F25B21;
-@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;800&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Saira:wght@400;700;800&display=swap);
 
 html, body {
   width: 100%;
@@ -276,6 +274,7 @@ p {
     line-height: 1.47;
   }
   &__burn-label {
+    margin-left: 8px;
     a {
       color: #fff;
       text-decoration: none;

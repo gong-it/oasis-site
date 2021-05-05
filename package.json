@@ -26,7 +26,8 @@
     "sass-loader": "^10.1.1",
     "svg-to-vue-component": "^0.3.8",
     "vue-fullpage.js": "^0.1.7",
-    "vue-typed-js": "^0.1.2"
+    "vue-typed-js": "^0.1.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
