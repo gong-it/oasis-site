@@ -100,7 +100,11 @@ export default class IndexPage extends Vue {
     'Savemeharry',
     'MarsJones',
     'Supah',
-    'Crisp'
+    'Crisp',
+    'lilcreep',
+    'Hatzz',
+    'PGP',
+    'Billzworth'
   ]
 
   get notableMembersChunks (): string[][] {

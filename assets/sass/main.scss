@@ -696,9 +696,10 @@ footer {
     line-height: 1.26;
   }
   .notable-members {
-    height: 568px;
+    height: 600px;
     svg {
-      height: 568px;
+      width:100%;
+      height: 600px;
     }
     .el-row {
       .el-col {
