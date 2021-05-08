@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script lang="ts" src="./src/_id.ts">
+<script lang="ts" src="./src/tip.ts">
 </script>
 <style scoped>
   :root {

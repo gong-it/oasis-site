@@ -16,7 +16,7 @@ interface ITip {
 }
 
 @Component
-export default class TipIdPage extends Vue {
+export default class TipPage extends Vue {
   head () {
     return {
       title: 'Oasis tip platform'
@@ -29,9 +29,11 @@ export default class TipIdPage extends Vue {
   web3: Web3 | null = null
   fromAddress: string | null = null
 
-  async asyncData ({ params }) {
-    const res = await fetch(`${process.env.TIPPING_URL}/tips/${params.id}`)
-    return { id: params.id, tip: await res.json() }
+  async asyncData ({ route }) {
+    const { id } = route.params
+
+    const res = await fetch(`${process.env.TIPPING_URL}/tips/${id}`)
+    return { id, tip: await res.json() }
   }
 
   async beforeMount () {
