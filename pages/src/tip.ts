@@ -29,8 +29,8 @@ export default class TipPage extends Vue {
   web3: Web3 | null = null
   fromAddress: string | null = null
 
-  async asyncData ({ route }) {
-    const { id } = route.params
+  async asyncData ({ query }) {
+    const { id } = query
 
     const res = await fetch(`${process.env.TIPPING_URL}/tips/${id}`)
     return { id, tip: await res.json() }
