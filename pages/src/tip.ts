@@ -23,20 +23,20 @@ export default class TipPage extends Vue {
     }
   }
 
-  id!: string
-  tip!: ITip
+  id: string | null = null
+  tip: ITip | null = null
   txid: string | null = null
   web3: Web3 | null = null
   fromAddress: string | null = null
 
-  async asyncData ({ query }) {
-    const { id } = query
+  async beforeMount () {
+    const { id } = this.$route.query
 
     const res = await fetch(`${process.env.TIPPING_URL}/tips/${id}`)
-    return { id, tip: await res.json() }
-  }
 
-  async beforeMount () {
+    this.id = id as string
+    this.tip = await res.json()
+
     if (!window.ethereum) {
       alert('Please install metamask to use this application')
 
@@ -77,6 +77,8 @@ export default class TipPage extends Vue {
   }
 
   async sendTransaction () {
+    if (this.tip === null) { return }
+
     const tx = this.createTx(
       this.fromAddress,
       this.tip.address,
