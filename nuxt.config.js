@@ -80,7 +80,7 @@ export default {
     ]
   },
   env: {
-    FULLPAGE_LICENSE_KEY: '4371956D-A1E94E28-95547766-F05E0915'
+    FULLPAGE_LICENSE_KEY: process.env.FULLPAGE_LICENSE_KEY
   },
   generate: {
     exclude: [
