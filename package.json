@@ -27,6 +27,7 @@
     "svg-to-vue-component": "^0.3.8",
     "vue-fullpage.js": "^0.1.7",
     "vue-typed-js": "^0.1.2",
+    "web3": "^1.3.5",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

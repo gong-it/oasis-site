@@ -80,7 +80,8 @@ export default {
     ]
   },
   env: {
-    FULLPAGE_LICENSE_KEY: process.env.FULLPAGE_LICENSE_KEY
+    FULLPAGE_LICENSE_KEY: process.env.FULLPAGE_LICENSE_KEY,
+    TIPPING_URL: process.env.TIPPING_URL
   },
   generate: {
     exclude: [
