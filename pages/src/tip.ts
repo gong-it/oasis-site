@@ -28,6 +28,7 @@ export default class TipPage extends Vue {
   txid: string | null = null
   web3: Web3 | null = null
   fromAddress: string | null = null
+  chainId: string | null = null
 
   async beforeMount () {
     const { id } = this.$route.query
@@ -43,6 +44,9 @@ export default class TipPage extends Vue {
       return
     }
 
+    this.chainId = window.ethereum.chainId
+    console.log(this.chainId)
+
     this.web3 = new Web3(window.ethereum)
     try {
       await this.requestAccount()
@@ -53,6 +57,10 @@ export default class TipPage extends Vue {
     window.ethereum.on('accountsChanged', () => {
       this.fromAddress = null
     })
+
+    window.ethereum.on('chainChanged', (chainId: string) => {
+      this.chainId = chainId
+    });
   }
 
   createTx (from, to, amount) {
