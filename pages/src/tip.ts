@@ -34,7 +34,7 @@ export default class TipPage extends Vue {
   async beforeMount () {
     const { id } = this.$route.query
 
-    const res = await fetch(`https://tipping-bot.herokuapp.com/tips/${id}`)
+    const res = await fetch(`${process.env.TIPPING_URL}/tips/${id}`)
 
     this.id = id as string
     this.tip = await res.json()
@@ -73,7 +73,7 @@ export default class TipPage extends Vue {
     const bnAmount = new BigNumber(amount)
     const exponential = (new BigNumber(10)).exponentiatedBy(9)
     const actualAmount = bnAmount.times(exponential)
-    const data = contract.methods.transfer(to, actualAmount.toString()).encodeABI()
+    const data = contract.methods.transfer(to, actualAmount.toFixed()).encodeABI()
     const tx = {
       from, // Required
       to: contractAddress, // Required (for non contract deployments)
