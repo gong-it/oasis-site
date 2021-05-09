@@ -1,5 +1,6 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import Web3 from 'web3'
+import BigNumber from 'bignumber.js'
 import abiArray from '~/src/utils/abiArray'
 
 interface ExtendedWindow extends Window {
@@ -12,7 +13,7 @@ interface ITip {
   address: string
   tag: string
   avatar: string
-  amount: number
+  amount: string
 }
 
 @Component
@@ -33,7 +34,7 @@ export default class TipPage extends Vue {
   async beforeMount () {
     const { id } = this.$route.query
 
-    const res = await fetch(`${process.env.TIPPING_URL}/tips/${id}`)
+    const res = await fetch(`https://tipping-bot.herokuapp.com/tips/${id}`)
 
     this.id = id as string
     this.tip = await res.json()
@@ -69,8 +70,10 @@ export default class TipPage extends Vue {
     const contractAddress = '0xd9c99510a5e3145359d91fe9caf92dd5d68b603a'
     // @ts-ignore
     const contract = new this.web3.eth.Contract(abiArray, contractAddress)
-    const actualAmount = Math.round(amount) * 10 ** 9
-    const data = contract.methods.transfer(to, actualAmount).encodeABI()
+    const bnAmount = new BigNumber(amount)
+    const exponential = (new BigNumber(10)).exponentiatedBy(9)
+    const actualAmount = bnAmount.times(exponential)
+    const data = contract.methods.transfer(to, actualAmount.toString()).encodeABI()
     const tx = {
       from, // Required
       to: contractAddress, // Required (for non contract deployments)
