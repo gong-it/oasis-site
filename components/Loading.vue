@@ -1,10 +1,10 @@
 <template>
   <div id="loading">
-    <h1 class="hero__header">
-      <vue-typed-js :strings="['Loading...', 'Loading...', 'Loading...']" :showCursor="false" :backSpeed="100" :loop="true">
-        <span class="text-orange typing"></span>
-      </vue-typed-js>
-    </h1>
+    <div class="spinner">
+      <div class="spinner-item"></div>
+      <div class="spinner-item"></div>
+      <div class="spinner-item"></div>
+    </div>
   </div>
 </template>
 
