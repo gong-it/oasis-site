@@ -1,9 +1,12 @@
 <template>
   <div id="app" class="flex flex-col items-center justify-center">
-    <h1 v-if="tip && tip.error">
+    <h1 v-if="chainId !== '0x38'">
+      You need to change metamask to use binance smart chain network.
+    </h1>
+    <h1 v-if="tip && tip.error && chainId === '0x38' ">
       You need to initiate a tip on the discord first and use the link from the bot.
     </h1>
-    <div v-if="tip && !tip.error" class="flex">
+    <div v-if="tip && !tip.error && chainId === '0x38'" class="flex">
       <img :src="tip.avatar" alt="" class="rounded-full">
       <div class="p-1 align-self-end">
         <h1>
@@ -15,7 +18,7 @@
       </div>
     </div>
 
-    <div v-if="tip && !tip.error" class="mt-5 flex justify-space-between">
+    <div v-if="tip && !tip.error && chainId === '0x38'" class="mt-5 flex justify-space-between">
       <!-- Connect button is disabled if we have the from address which is the person who is connected -->
       <button v-if="!fromAddress" class="btn btn--primary" @click="requestAccount">
         Connect
