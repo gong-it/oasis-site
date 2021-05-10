@@ -52,6 +52,10 @@ p {
   display: inline-block;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -85,6 +89,9 @@ p {
   margin-top: 142px;
   margin-bottom: 1.5rem;
 
+  &--small {
+    margin-top: 72px;
+  }
   &__right {
     text-align: right;
   }
@@ -139,6 +146,10 @@ p {
   }
 }
 
+h1 {
+  font-family: "Saira";
+}
+
 .hero__header {
   font-weight: normal;
   font-size: 3.5rem;
@@ -188,11 +199,24 @@ p {
   outline: none;
   transition: background-color .5s;
   text-decoration: none;
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
   &--primary {
     background-color: $blue;
 
     &:focus, &:active, &:hover {
       background-color: $orange;
+    }
+  }
+  &--danger {
+    color: #fff;
+    transition: opacity .5s;
+    background: linear-gradient(121.56deg, #15FFFB -48.71%, #F9B233 -28.41%, #F38B30 -14.08%, #EE6C2E 1.44%, #EB532C 16.96%, #E8412B 32.48%, #E7362A 50.39%, #E6332A 70.69%);
+
+    &:focus, &:active, &:hover {
+      opacity: .8;
     }
   }
 }

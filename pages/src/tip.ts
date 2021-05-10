@@ -2,6 +2,14 @@ import { Vue, Component } from 'nuxt-property-decorator'
 import Web3 from 'web3'
 import BigNumber from 'bignumber.js'
 import abiArray from '~/src/utils/abiArray'
+import LogoBlack from '~/assets/logo-black.svg'
+import SmallLogo from '~/assets/small-logo.svg'
+import Figure1 from '~/assets/tip/figure-1.svg'
+import Figure2 from '~/assets/tip/figure-2.svg'
+import Figure3 from '~/assets/tip/figure-3.svg'
+import Figure4 from '~/assets/tip/figure-4.svg'
+import Figure5 from '~/assets/tip/figure-5.svg'
+import Figure6 from '~/assets/tip/figure-6.svg'
 
 interface ExtendedWindow extends Window {
   ethereum?: any
@@ -16,7 +24,18 @@ interface ITip {
   amount: string
 }
 
-@Component
+@Component({
+  components: {
+    LogoBlack,
+    SmallLogo,
+    Figure1,
+    Figure2,
+    Figure3,
+    Figure4,
+    Figure5,
+    Figure6
+  }
+})
 export default class TipPage extends Vue {
   head () {
     return {
@@ -30,6 +49,10 @@ export default class TipPage extends Vue {
   web3: Web3 | null = null
   fromAddress: string | null = null
   chainId: string | null = null
+
+  get isBsc () {
+    return this.chainId === '0x38'
+  }
 
   async beforeMount () {
     const { id } = this.$route.query
@@ -61,7 +84,7 @@ export default class TipPage extends Vue {
 
     window.ethereum.on('chainChanged', (chainId: string) => {
       this.chainId = chainId
-    });
+    })
   }
 
   createTx (from, to, amount) {
@@ -120,5 +143,9 @@ export default class TipPage extends Vue {
     this.fromAddress = (
       await window.ethereum.request({ method: 'eth_requestAccounts' })
     )[0]
+  }
+
+  formatTag (tag: string) {
+    return tag.split('#')[0]
   }
 }
