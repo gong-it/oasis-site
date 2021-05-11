@@ -8,7 +8,7 @@
         <el-container>
           <el-main id="first-screen">
             <h1 id="header" class="hero__header text-uppercase">
-              There is <a href="https://youtu.be/6hzrDeceEKc?t=16" target="_blank">wonderwall</a>
+              There is a <a href="https://youtu.be/6hzrDeceEKc?t=16" target="_blank">wonderwall</a>
               <br>
               <b>
                 in the defi wild west.
@@ -49,7 +49,7 @@
               Oasis token will provide its holders with access to a wide range of the projects developed by the community.
               <br>
               <br>
-              Pre-sale snipe bot, New listing auto-buy/sell bot, news and feeds for selected coins, discussion board, portfolio tracking, in depth research reports, and more!
+              Pre-sale snipe bot, New listing auto-buy/sell bot, limit orders, charting,news and feeds for selected coins, discussion board, portfolio tracking, in depth research reports, rug sniffers, and more!
             </p>
             <div class="hero__description hero__description--second-screen align-items-center">
               <div id="schema-animation"></div>
