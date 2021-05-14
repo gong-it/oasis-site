@@ -22,8 +22,7 @@
               <hero-logo style="width: 100%" />
               <div class="hero__description__right">
                 <p class="hero__paragraph">
-                  We are a small community of crypto-enthusiasts, programming artisans, and digital design experts. This token represents the community's value within itself. The use-case of the token is interaction within projects built by the community and funding for the larger projects we have in the works for the future.
-                  The mirage is behind you. Relax, take a breath, and drink from the pool.
+                  Oasis is a token created by a small community of crypto-enthusiasts, programmers and digital design experts. Our token will provide users with the ability to interact with various parts of the Oasis Dashboard and Discord Bots. On this dashboard and on discord we will have multiple products which will all be listed below! Oasis will also start a rug certification label to make sure there will be fewer scams on the network! Everything a crypto trader wants we will serve. The mirage is behind you. Relax, take a breath and drink from the pool. 
                   <br>
                   <br>
                   Welcome to the Oasis. We hope you enjoy your stay.
@@ -49,8 +48,12 @@
               Oasis token will provide its holders with access to a wide range of the projects developed by the community.
               <br>
               <br>
+<<<<<<< Updated upstream
               Pre-sale snipe bot, New listing auto-buy/sell bot, limit orders, charting,news and feeds for selected coins, discussion board, portfolio tracking, in depth research reports, rug sniffers, and more!
             </p>
+=======
+We will provide charting and tools with memory, limit orders on both bsc and uniswap, a snipe bot for new listings and presales with an automated buy/sell, tracked wallet mirroring, news and feeds for selected coins, podcasts, a discussion board, portfolio trackers for your favorite coins, in depth research reports and Technical analysis, rug sniffers to keep the community safe, and more! There will also be Oasis Discord bots to show new listings and tracked wallet movements, and tailored tippings bots to new coins.             </p>
+>>>>>>> Stashed changes
             <div class="hero__description hero__description--second-screen align-items-center">
               <div id="schema-animation"></div>
               <div class="hero__description__big">
