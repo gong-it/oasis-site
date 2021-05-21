@@ -19,7 +19,10 @@
         </el-header>
         <div class="middle">
           <div class="form">
-            <h1 v-if="!isBsc">
+            <a v-if="chainId === null" class="btn btn--danger w-100" target="_blank" :href="metaMaskLink">
+              Open MetaMask mobile
+            </a>
+            <h1 v-else-if="!isBsc">
               You need to change metamask to use Binance Smart Chain network.
             </h1>
             <h1 v-if="tip && tip.error && isBsc">

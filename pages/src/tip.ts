@@ -1,7 +1,7 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import Web3 from 'web3'
+import WalletConnectProvider from '@walletconnect/web3-provider'
 import BigNumber from 'bignumber.js'
-import abiArray from '~/src/utils/abiArray'
 import LogoBlack from '~/assets/logo-black.svg'
 import SmallLogo from '~/assets/small-logo.svg'
 import Figure1 from '~/assets/tip/figure-1.svg'
@@ -10,6 +10,7 @@ import Figure3 from '~/assets/tip/figure-3.svg'
 import Figure4 from '~/assets/tip/figure-4.svg'
 import Figure5 from '~/assets/tip/figure-5.svg'
 import Figure6 from '~/assets/tip/figure-6.svg'
+import { AbiItem } from '~/node_modules/web3-utils'
 
 interface ExtendedWindow extends Window {
   ethereum?: any
@@ -49,9 +50,16 @@ export default class TipPage extends Vue {
   web3: Web3 | null = null
   fromAddress: string | null = null
   chainId: string | null = null
+  abi!: AbiItem[] | AbiItem
 
   get isBsc () {
     return this.chainId === '0x38'
+  }
+
+  get metaMaskLink () {
+    const port = window.location.port !== '' ? `:${window.location.port}` : ''
+
+    return `https://metamask.app.link/dapp/${window.location.hostname}${port}${this.$route.fullPath}`
   }
 
   async beforeMount () {
@@ -68,10 +76,18 @@ export default class TipPage extends Vue {
       return
     }
 
-    this.chainId = window.ethereum.chainId
-    console.log(this.chainId)
+    this.abi = await (await fetch('/oasis-abi.json')).json()
 
-    this.web3 = new Web3(window.ethereum)
+    const provider = new WalletConnectProvider({
+      rpc: {
+        56: 'https://bsc-dataseed.binance.org/'
+      }
+    })
+
+    // @ts-ignore
+    this.web3 = new Web3(provider)
+
+    this.chainId = window.ethereum.chainId
     try {
       await this.requestAccount()
     } catch (error) {
@@ -91,22 +107,23 @@ export default class TipPage extends Vue {
     if (this.web3 === null) { return }
 
     const contractAddress = '0xd9c99510a5e3145359d91fe9caf92dd5d68b603a'
-    // @ts-ignore
-    const contract = new this.web3.eth.Contract(abiArray, contractAddress)
+
+    const contract = new this.web3.eth.Contract(this.abi, contractAddress)
     const bnAmount = new BigNumber(amount)
     const exponential = (new BigNumber(10)).exponentiatedBy(9)
     const actualAmount = bnAmount.times(exponential)
     const data = contract.methods.transfer(to, actualAmount.toFixed()).encodeABI()
+
     const tx = {
       from, // Required
       to: contractAddress, // Required (for non contract deployments)
       data, // Required
-      gasLimit: this.web3.utils.toHex(100000),
-      gasPrice: this.web3.utils.toHex(this.web3.utils.toWei('5', 'gwei')), // Optional
-      value: '0x00',
+      gas: 90000,
       networkId: 56,
-      chainId: 56 // Optional
+      value: '0x00', // MetaMask hack
+      chainId: this.chainId
     }
+
     return tx
   }
 
@@ -118,6 +135,7 @@ export default class TipPage extends Vue {
       this.tip.address,
       this.tip.amount
     )
+
     try {
       const txid = await window.ethereum.request({
         method: 'eth_sendTransaction',
