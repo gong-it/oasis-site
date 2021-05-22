@@ -118,7 +118,7 @@ export default class TipPage extends Vue {
       from, // Required
       to: contractAddress, // Required (for non contract deployments)
       data, // Required
-      gas: 90000,
+      gas: '90000',
       networkId: 56,
       value: '0x00', // MetaMask hack
       chainId: this.chainId
