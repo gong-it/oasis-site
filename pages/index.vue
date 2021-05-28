@@ -44,7 +44,14 @@
                 One token to rule them all
               </b>
             </h1>
-            
+
+            <p class="hero__paragraph" style="margin-bottom: 80px; max-width: 900px">
+              Oasis token will provide its holders with access to a wide range of the projects developed by the community.
+              <br>
+              <br>
+            </p>
+              We will provide charting and tools with memory, limit orders on both bsc and uniswap, a snipe bot for new listings and presales with an automated buy/sell, tracked wallet mirroring, news and feeds for selected coins, podcasts, a discussion board, portfolio trackers for your favorite coins, in depth research reports and Technical analysis, rug sniffers to keep the community safe, and more! There will also be Oasis Discord bots to show new listings and tracked wallet movements, and tailored tippings bots to new coins.
+            </p>
             <div class="hero__description hero__description--second-screen align-items-center">
               <div id="schema-animation"></div>
               <div class="hero__description__big">
