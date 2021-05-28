@@ -70,7 +70,7 @@
                Wallet tracking bot of known wallets we have access to, or wallets of your choice.
               <br>
               <span class="text-red-light">Shadow:</span>
-               Tracked wallet copy trading via mempool.
+               Tracked wallet copy trading via mempool. This will give you the ability frontrun known whales and get in and out before they change the price too hard.
               <br>
               <span class="text-red-light">Papyrus:</span>
                Automated rug detection to provide safety from potential loss of funds.
