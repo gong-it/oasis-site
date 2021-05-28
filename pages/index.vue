@@ -44,6 +44,7 @@
                 One token to rule them all
               </b>
             </h1>
+
             <p class="hero__paragraph" style="margin-bottom: 80px; max-width: 900px">
               Oasis token will provide its holders with access to a wide range of the projects developed by the community.
               <br>
@@ -62,6 +63,30 @@
                 <particle-5 id="particle-5"></particle-5>
               </div>
             </div>
+            <p class="hero__paragraph" style="margin-bottom: 80px; max-width: 900px">
+              Oasis token will provide its holders with access to a wide range of the projects developed by the community.
+              <br>
+              <br>
+              <span class="text-red-light">Sand:</span> 
+              Customizable Discord/TG tipping and price bot. Compatible with BSC, ZIL, ETH, and SOL tokens.
+              <br>
+              <span class="text-red-light">Mineral:</span>
+               Filterable new listing bot. Compatible with AVAX, BSC, ETH, and SOL tokens.
+              <br>
+              <span class="text-red-light">Gem:</span>
+               Wallet tracking bot of known wallets we have access to, or wallets of your choice.
+              <br>
+              <span class="text-red-light">Shadow:</span>
+               Tracked wallet copy trading via mempool. This will give you the ability frontrun known whales and get in and out before they change the price too hard.
+              <br>
+              <span class="text-red-light">Papyrus:</span>
+               Automated rug detection to provide safety from potential loss of funds.
+              <br>
+              <span class="text-red-light">Ray:</span>
+               Manual or automated snipe LP/presale snipe bot.
+              
+              <br><br>
+            </p>
           </el-main>
         </el-container>
       </section>
@@ -88,7 +113,7 @@
                     <wallet-icon />
                   </div>
                   <p>
-                    Download <a href="https://metamask.io/download.html" target="_blank">Metamask</a> App to your Smartphone or to your browser if you are using a laptop or pc.
+                    Download <a href="https://metamask.io/download.html" target="_blank">Metamask</a> App to your browser if you are using a laptop or pc. Download <a href="https://trustwallet.com/" target="_blank">TrustWallet</a> if you're on iOS or Android.
                   </p>
                 </div>
               </el-col>
@@ -103,7 +128,7 @@
                     <coin-icon />
                   </div>
                   <p>
-                    Transfer BNB to your wallet. You can use <a href="https://www.binance.com/" target="_blank">Binance</a> to purchase BNB.
+                    Transfer BNB to your wallet. You can use <a href="https://www.binance.com/" target="_blank">Binance</a> to purchase BNB, or buy it through TrustWallet and convert it to Smart Chain BSC if you don't have access to Binance.
                   </p>
                 </div>
               </el-col>
@@ -118,7 +143,7 @@
                     <pancake-icon />
                   </div>
                   <p>
-                    If you're using TrustWallet, access Dapps tab on the bottom of your screen and click on PancakeSwap.
+                    If you're using TrustWallet, access the Dapps tab on the bottom of your screen and click on PancakeSwap. If you're using Metamask, just click <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd9c99510a5e3145359d91fe9caf92dd5d68b603aHere" target="_blank">Here</a> and connect using WalletConnect.
                   </p>
                 </div>
               </el-col>
@@ -133,7 +158,7 @@
                     <phone-icon />
                   </div>
                   <p>
-                    iPhone Users might have to access it through TrustWallet Browser. <a href="https://www.youtube.com/watch?v=-qnlu7A9pkE" target="_blank">Check how</a>.
+                    iPhone Users users will need to enable the TrustWallet Browser tab. <a href="trust://browser_enable" target="_blank">Click this link</a> in safari to enable the browser.
                   </p>
                 </div>
               </el-col>
@@ -150,7 +175,7 @@
                     <address-icon />
                   </div>
                   <p>
-                    For the ones on TrustWallet App, click on "Select a currency" and paste our Contract into the search Tab:
+                    If you're using TrustWallet App, click on "Select a currency" and paste our Contract into the search Tab:
                     <br>
                     0xd9c99510a5e3145359d91fe9caf92dd5d68b603a
                   </p>
@@ -167,7 +192,7 @@
                     <computer-icon />
                   </div>
                   <p>
-                    To access PancakeSwap from the laptop or PC, <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd9c99510a5e3145359d91fe9caf92dd5d68b603a" target="_blank">click here</a>.
+                    To access PancakeSwap from a laptop or PC, <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xd9c99510a5e3145359d91fe9caf92dd5d68b603a" target="_blank">click here</a>.
                   </p>
                 </div>
               </el-col>
@@ -183,6 +208,10 @@
                   </div>
                   <p>
                     Now, click on the little bar button to set the Slippage to 11% or higher in times of high demand.
+                    <br><br>
+                    Now you're ready to buy Oasis! Set the amount of Oasis you want in BNB. 
+                    <br>
+                    You might have to remove the last digit of Oasis and add it again to get it to work.
                   </p>
                 </div>
               </el-col>
@@ -197,9 +226,11 @@
                     <oasis-icon />
                   </div>
                   <p>
-                    You're ready to Buy Oasis! Click on Swap and confirm your transaction.
-                    <br>
+                    Click on Swap and confirm your transaction.
+                    <br><br>
                     After the transaction confirms, you'll have Oasis in your wallet.
+                    <br><br>
+                    Congratualtions, and welcome to The Oasis!
                   </p>
                 </div>
               </el-col>
