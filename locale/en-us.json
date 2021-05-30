@@ -1,6 +1,4 @@
 {
-  "en": "English",
-  "ru": "Russian",
   "first_screen_header_first_part": "There is a",
   "wonderwall": "wonderwall",
   "first_screen_header_second_part": "in the defi wild west.",
@@ -41,5 +39,7 @@
   "how_to_buy_seventh_third": "You might have to remove the last digit of Oasis and add it again to get it to work.",
   "how_to_buy_eighth_first": "Click on Swap and confirm your transaction.",
   "how_to_buy_eighth_second": "After the transaction confirms, you'll have Oasis in your wallet.",
-  "how_to_buy_eighth_third": "Congratulations, and welcome to The Oasis!"
+  "how_to_buy_eighth_third": "Congratulations, and welcome to The Oasis!",
+  "en": "English",
+  "ru": "Russian"
 }
