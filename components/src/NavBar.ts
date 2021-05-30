@@ -24,7 +24,6 @@ import TwitterIcon from '~/assets/icons/twitter.svg'
 export default class NavBarComponent extends Vue {
   menu: boolean = false
   enterTimeline: gsap.core.Timeline | null = null
-  language = this.$i18n.locale
   callback = () => {}
 
   head () {

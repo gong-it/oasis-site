@@ -22,7 +22,7 @@
               <hero-logo style="width: 100%" />
               <div class="hero__description__right">
                 <p class="hero__paragraph">
-                  Oasis is a token created by a small community of crypto-enthusiasts, programmers and digital design experts. Our token will provide users with the ability to interact with various parts of the Oasis Dashboard and Discord Bots. On this dashboard and on discord we will have multiple products which will all be listed below! Oasis will also start a rug certification label to make sure there will be fewer scams on the network! Everything a crypto trader wants we will serve. The mirage is behind you. Relax, take a breath and drink from the pool.
+                  Oasis is a token created by a small community of crypto-enthusiasts, programmers and digital design experts. Our token will provide users with the ability to interact with various parts of the Oasis Dashboard and Discord Bots. On this dashboard and on discord we will have multiple products which will all be listed below! Oasis will also start a rug certification label to make sure there will be fewer scams on the network! Everything a crypto trader wants we will serve. The mirage is behind you. Relax, take a breath and drink from the pool. 
                   <br>
                   <br>
                   Welcome to the Oasis. We hope you enjoy your stay.
@@ -67,7 +67,7 @@
               Oasis token will provide its holders with access to a wide range of the projects developed by the community.
               <br>
               <br>
-              <span class="text-red-light">Sand:</span>
+              <span class="text-red-light">Sand:</span> 
               Customizable Discord/TG tipping and price bot. Compatible with BSC, ZIL, ETH, and SOL tokens.
               <br>
               <span class="text-red-light">Mineral:</span>
@@ -84,7 +84,7 @@
               <br>
               <span class="text-red-light">Ray:</span>
                Manual or automated snipe LP/presale snipe bot.
-
+              
               <br><br>
             </p>
           </el-main>
@@ -209,7 +209,7 @@
                   <p>
                     Now, click on the little bar button to set the Slippage to 11% or higher in times of high demand.
                     <br><br>
-                    Now you're ready to buy Oasis! Set the amount of Oasis you want in BNB.
+                    Now you're ready to buy Oasis! Set the amount of Oasis you want in BNB. 
                     <br>
                     You might have to remove the last digit of Oasis and add it again to get it to work.
                   </p>

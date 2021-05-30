@@ -23,7 +23,6 @@
     "lottie-web": "^5.7.8",
     "nuxt": "^2.15.3",
     "nuxt-fullpage.js": "0.0.3",
-    "nuxt-i18n": "^6.27.0",
     "nuxt-property-decorator": "^2.9.1",
     "sass": "^1.32.11",
     "sass-loader": "^10.1.1",

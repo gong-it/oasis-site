@@ -14,7 +14,6 @@
     "strict": true,
     "noEmit": true,
     "noImplicitAny": false,
-    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
@@ -28,8 +27,7 @@
     "types": [
       "@nuxt/types",
       "@nuxtjs/axios",
-      "@types/node",
-      "nuxt-i18n"
+      "@types/node"
     ]
   },
   "exclude": [
