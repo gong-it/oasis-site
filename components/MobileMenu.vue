@@ -3,17 +3,17 @@
     <div class="mobile-menu__elements">
       <div id="mobileAbout" class="mobile-menu__element">
         <a href="#projects" @click="closeMenu">
-          About
+          {{ $t('about') }}
         </a>
       </div>
       <div id="mobileHtb" class="mobile-menu__element">
         <a href="#htb" @click="closeMenu">
-          How to buy
+          {{ $t('how_to_buy') }}
         </a>
       </div>
       <div id="mobileTokenomics" class="mobile-menu__element">
         <a href="#tokenomics" @click="closeMenu">
-          Tokenomics
+          {{ $t('tokenomics') }}
         </a>
       </div>
       <div class="mobile-menu__element">
