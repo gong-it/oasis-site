@@ -1,3 +1,5 @@
+import messages from './locale'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -64,8 +66,17 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-fullpage.js',
-    '~/modules/svgLoader.ts'
+    '~/modules/svgLoader.ts',
+    'nuxt-i18n'
   ],
+  i18n: {
+    locales: Object.keys(messages),
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages
+    },
+    defaultLocale: 'en'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
