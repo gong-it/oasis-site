@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <img class="doge" src="/doge.jpg" alt="">
 </template>
 
 <script lang="ts" src="./src/doge.ts">

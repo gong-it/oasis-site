@@ -15,23 +15,7 @@ html, body {
 }
 
 .doge {
-  background-size: cover;
-  height: 10091px;
-  background: url(/doge.jpg) no-repeat center center;
-  zoom: 0.5;
-
-  @media (max-width: 1857px) {
-    zoom: 0.4;
-  }
-  @media (max-width: 1525px) {
-    zoom: 0.3;
-  }
-  @media (max-width: 1130px) {
-    zoom: 0.2;
-  }
-  @media (max-width: 765px) {
-    zoom: 0.1;
-  }
+  width: 100%;
 }
 
 a {
