@@ -35,6 +35,7 @@ export default {
       { rel: 'shortcut icon', sizes: '150x150', href: '/150x150.png?v=1' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/180x180.png?v=1' },
       { rel: 'shortcut icon', sizes: '192x192', href: '/192x192.png?v=1' },
+      { rel: 'shortcut icon', sizes: '200x200', href: '/200x200.png?v=1' },
       { rel: 'shortcut icon', sizes: '512x512', href: '/512x512.png?v=1' }
     ]
   },
