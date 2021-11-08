@@ -69,7 +69,8 @@ export default class IndexPage extends Vue {
     scrollBar: true,
     autoScrolling: false,
     fitToSection: false,
-    easing: 'easeInOutCubic'
+    easing: 'easeInOutCubic',
+    verticalCentered: false
   }
 
   notableMembers = [
