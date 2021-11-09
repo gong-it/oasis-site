@@ -29,6 +29,8 @@ import BurnIcon from '~/assets/fourth-screen/burn.svg'
 import Node from '~/assets/fourth-screen/node.svg'
 import Oasis from '~/assets/fourth-screen/oasis.svg'
 import FooterBg from '~/assets/footer-bg.svg'
+import DiscordIcon from '~/assets/icons/discord.svg'
+import TwitterIcon from '~/assets/icons/twitter.svg'
 
 @Component({
   components: {
@@ -57,7 +59,9 @@ import FooterBg from '~/assets/footer-bg.svg'
     BurnIcon,
     Node,
     Oasis,
-    FooterBg
+    FooterBg,
+    DiscordIcon,
+    TwitterIcon
   }
 })
 export default class IndexPage extends Vue {
